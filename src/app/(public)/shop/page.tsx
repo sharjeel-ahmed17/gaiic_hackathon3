@@ -11,8 +11,11 @@ const Shop = async () => {
     throw new Error("Base Url is not given!.");
 }
 
+
+const BASE_URL =
+process.env.base_url || "http://localhost:3000"; 
 // const response = await fetch(`${process.env.base_url}/api/product`)
-  const response = await fetch(`${process.env.base_url}/api/product`)
+  const response = await fetch(`${BASE_URL}/api/product`)
   if (!response.ok) {
     throw new Error("Some thing wen wrong");
     }
