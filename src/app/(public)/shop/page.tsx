@@ -3,6 +3,7 @@ import { Product } from '@/interfaces/Product';
 import React from 'react'
 import ProductToolbar from './Filter';
 import Services from '@/components/reuseable/Services';
+import { Breadcrumb } from '@/components/reuseable/Hero2';
 
 
 const Shop = async () => {
@@ -24,6 +25,14 @@ const Shop = async () => {
   return (
 
     <div>
+       <Breadcrumb
+      title="Shop"
+      backgroundImage="/images/hero2.jpg" 
+      links={[
+        { name: "Home", href: "/" },
+        { name: "Shop", href: "/shop" },
+      ]}
+    />
       <ProductToolbar/>
       {
         data.length > 0 ?
