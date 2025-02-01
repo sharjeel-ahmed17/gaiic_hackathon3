@@ -4,11 +4,11 @@ import { Product } from "@/interfaces/Product";
 import Link from "next/link";
 export default async function FeaturedProducts() {
 
-  if (!process.env.base_url) {
+  if (!process.env.NEXT_PUBLIC_base_url) {
     throw new Error("Base Url is not given!.");
   }
 
-  const response = await fetch(`${process.env.base_url}/api/product`)
+  const response = await fetch(`${process.env.NEXT_PUBLIC_base_url}/api/product`)
   if (!response.ok) {
     throw new Error("Some thing wen wrong");
   }
