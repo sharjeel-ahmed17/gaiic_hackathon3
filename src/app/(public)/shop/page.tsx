@@ -54,9 +54,11 @@
 // export default Shop
 import React from 'react'
 
-export const Shop = () => {
+const Shop = () => {
   return (
     <div>Shop jdsfhljshda </div>
   )
 }
 
+
+export default Shop;
