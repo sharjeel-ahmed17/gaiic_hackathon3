@@ -17,13 +17,13 @@ export default async function Home() {
   console.log(user?.id);
 
   return (
-    <div>
+    <>
 
       <Hero />
       <Category />
       <FeaturedProducts />
       <Cta />
       <ImageGallery />
-    </div>
+    </>
   );
 }
