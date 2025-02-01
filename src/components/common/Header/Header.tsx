@@ -7,9 +7,12 @@ import { navLink } from "@/lib/link";
 import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
 import { SignedIn, SignedOut, SignInButton } from "@clerk/clerk-react";
-
+import clsx from 'clsx';
+import { usePathname } from "next/navigation";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  console.log(pathname);
 
   return (
     <header className="w-full bg-white shadow-md overflow-x-hidden">
@@ -30,18 +33,28 @@ const Navbar = () => {
         <nav className="hidden lg:flex items-center space-x-8">
           {
             navLink.map((nav, index) => (
-               <Link key={index} href={nav.path} className="text-gray-800 hover:text-gray-500">{nav.name}</Link>
+              //  <Link key={index} href={nav.path} className="text-gray-800 hover:text-gray-500">{nav.name}</Link>
+              <Link
+                key={index}
+                href={nav.path}
+                className={clsx(
+                  'text-red-600',
+                  {
+                    'bg-red-500 text-red-950': pathname === nav.path,
+                  },
+                )}
+              >{nav.name}</Link>
             ))
-          } 
+          }
         </nav>
 
         {/* Icons (Desktop) */}
         <div className="hidden lg:flex items-center space-x-6">
           <SignedIn>
-            <UserButton/>
+            <UserButton />
           </SignedIn>
           <SignedOut>
-            <SignInButton/>
+            <SignInButton />
           </SignedOut>
           <User className="w-6 h-6 cursor-pointer" />
           <Heart className="w-6 h-6 cursor-pointer" />

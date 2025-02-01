@@ -5,6 +5,15 @@ import ProductToolbar from './Filter';
 import Services from '@/components/reuseable/Services';
 import { Breadcrumb } from '@/components/reuseable/Hero2';
 
+import {
+    Pagination,
+    PaginationContent,
+    PaginationEllipsis,
+    PaginationItem,
+    PaginationLink,
+    PaginationNext,
+    PaginationPrevious,
+} from "@/components/ui/pagination"
 
 const Shop = async () => {
     if (!process.env.NEXT_PUBLIC_base_url) {
@@ -42,6 +51,30 @@ const Shop = async () => {
                     <ProductListing products={data} />
                     : <h1>Product Not Found</h1>
             }
+
+
+
+            <Pagination>
+                <PaginationContent>
+                    <PaginationItem>
+                        <PaginationPrevious href="#" />
+                    </PaginationItem>
+                    <PaginationItem>
+                        <PaginationLink href="#">1</PaginationLink>
+                    </PaginationItem>
+                    <PaginationItem>
+                        <PaginationLink href="#">2</PaginationLink>
+                    </PaginationItem>
+                    <PaginationItem>
+                        <PaginationLink href="#">3</PaginationLink>
+                    </PaginationItem>
+
+                    <PaginationItem>
+                        <PaginationNext href="#" />
+                    </PaginationItem>
+                </PaginationContent>
+            </Pagination>
+
             <Services />
 
 
