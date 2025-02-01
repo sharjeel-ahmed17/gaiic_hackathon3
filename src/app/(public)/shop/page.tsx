@@ -13,7 +13,7 @@ const Shop = async () => {
 
 
 
-    const response = await fetch(`${process.env.base_url}/api/product`)
+    const response = await fetch(`https://gaiic-hackathon3.vercel.app/api/product`)
     if (!response.ok) {
         throw new Error("Some thing wen wrong");
     }
