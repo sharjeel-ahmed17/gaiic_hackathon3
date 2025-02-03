@@ -1,7 +1,7 @@
 import ProductListing from "@/components/Product/ProductListing";
 import { Button } from "@/components/ui/button";
 import { Product } from "@/interfaces/Product";
-import Link from "next/link";
+
 export default async function FeaturedProducts() {
 
   if (!process.env.NEXT_PUBLIC_base_url) {
@@ -12,8 +12,10 @@ export default async function FeaturedProducts() {
   if (!response.ok) {
     throw new Error("Some thing wen wrong");
   }
-  // create the responsse interface 
+  // // create the responsse interface 
   const { error, message, data }: { error: boolean, message: string, data: Product[] } = await response.json();
+
+
 
 
 

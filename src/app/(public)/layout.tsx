@@ -4,8 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/common/Header/Header";
 import Footer from "@/components/common/Footer/Footer";
 import { poppins } from "@/lib/fonts";
-
-
+import { CartProvider } from "@/contexts/cartContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,16 +18,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={poppins.className}
-      >
+      <body className={poppins.className}>
         <ClerkProvider>
-          <div className="max-w-[1440px] mx-auto">
-          <Header />
-        {children}
-          <Footer/>
-
-          </div>
+          <CartProvider>
+            <div className="max-w-[1440px] mx-auto">
+              <Header />
+              {children}
+              <Footer />
+            </div>
+          </CartProvider>
         </ClerkProvider>
       </body>
     </html>
