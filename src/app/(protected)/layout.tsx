@@ -4,6 +4,7 @@ import "../globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/common/Header/Header";
 import { CartProvider } from "@/contexts/cartContext";
+import Footer from "@/components/common/Footer/Footer";
 
 
 const geistSans = Geist({
@@ -34,10 +35,12 @@ export default function RootLayout({
         <ClerkProvider>
         <CartProvider>
 
+<div className="mx-auto max-w-[1440px]">
 
          <Header/>
         {children}
-       
+       <Footer />
+</div>
         </CartProvider>
         </ClerkProvider>
       </body>
