@@ -12,8 +12,10 @@ export default async function FeaturedProducts() {
   if (!response.ok) {
     throw new Error("Some thing wen wrong");
   }
-  // create the responsse interface 
+  // // create the responsse interface 
   const { error, message, data }: { error: boolean, message: string, data: Product[] } = await response.json();
+
+
 
 
 

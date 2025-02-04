@@ -52,7 +52,7 @@ export interface Product {
     };
     minimunOrderQuantity: number;
     colors: string[];
-    _id: string;
+    _id: number;
     warranty: {
         warrentyServiceType: string;
         domesticWarranty: string;
@@ -75,3 +75,5 @@ export interface Product {
     price: number;
     _createdAt: string;
 }
+
+

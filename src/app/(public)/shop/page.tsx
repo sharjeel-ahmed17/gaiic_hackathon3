@@ -8,7 +8,7 @@ import { Breadcrumb } from '@/components/reuseable/Hero2';
 import {
     Pagination,
     PaginationContent,
-    PaginationEllipsis,
+
     PaginationItem,
     PaginationLink,
     PaginationNext,
