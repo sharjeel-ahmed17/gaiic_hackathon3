@@ -1,4 +1,5 @@
 
+import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 const categories = [
   { image: "/images/cat1.png", title: "Dining" },
@@ -7,7 +8,15 @@ const categories = [
 ];
 
 
-const Category = () => {
+const Category = async () => {
+  const response = await fetch('/api/category');
+  if (!response.ok) {
+    throw new Error("Category not founds")
+  }
+  const data = await response.json();
+  console.log('data', data);
+
+
   return (
     <div className="container mx-auto mt-16 px-4 lg:px-16 text-center py-6">
       <h2 className="font-bold text-[32px] leading-[48px]">Browse The Range</h2>

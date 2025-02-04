@@ -1,7 +1,7 @@
 import ProductListing from "@/components/Product/ProductListing";
 import { Button } from "@/components/ui/button";
 import { Product } from "@/interfaces/Product";
-import Link from "next/link";
+
 export default async function FeaturedProducts() {
 
   if (!process.env.NEXT_PUBLIC_base_url) {

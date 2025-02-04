@@ -20,7 +20,7 @@ export default async function Home() {
     <>
 
       <Hero />
-      <Category />
+      {/* <Category /> */}
       <FeaturedProducts />
       <Cta />
       <ImageGallery />
