@@ -66,7 +66,7 @@
 //             <p><strong>Tags:</strong> Sofa, Chair, Home, Shop</p>
 //             <p><strong>Share:</strong> <span className="text-black">●</span> <span className="text-black">●</span> <span className="text-black">●</span></p>
 //           </div>
-//         </div>
+//         </div>   
 //       </div>
 //     );
 //   }

@@ -18,10 +18,17 @@
 // }
 
 import React from 'react'
+import CheckoutSummary from './CheckoutSubtotal'
 
 const Checkout = () => {
   return (
-    <div>Checkout</div>
+    <div className='px-14 space-x-2 flex md:flex-row flex-col'>
+      <div className='md:w-[50%] w-full'>left</div>
+      <div className='md:w-[50%] w-full'>
+        <CheckoutSummary />
+      </div>
+
+    </div>
   )
 }
 
