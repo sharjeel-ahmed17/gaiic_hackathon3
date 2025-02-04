@@ -1,8 +1,14 @@
 import React from 'react'
+import Breadcrumb from './ProductBreadCrumb'
+import ProductDetailsComp from '@/components/Product/ProductDetails'
 
 const ProductDetails = () => {
   return (
-    <div>page</div>
+    <div>
+        <Breadcrumb />
+        <ProductDetailsComp />
+
+    </div>
   )
 }
 
