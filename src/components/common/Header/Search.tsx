@@ -33,12 +33,12 @@ const SearchCompo = () => {
           placeholder="Search for products..."
           className="flex-1 h-12 px-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#007580] bg-white text-sm"
         />
-        <button
+        {/* <button
           type="submit"
           className="h-12 px-6 rounded-lg bg-[#f9f1e7] text-black text-sm hover:bg-[#e6b477]"
         >
           Search
-        </button>
+        </button> */}
       </div>
     </form>
   );
