@@ -1,6 +1,6 @@
 import { Breadcrumb } from '@/components/reuseable/Hero2'
 import React from 'react'
-// import ProductComparisionComp from './ProductComparison'
+import ProductComparisionComp from './ProductComparison'
 
 const ProductComparision = () => {
   return (
@@ -13,7 +13,7 @@ const ProductComparision = () => {
                     { name: "Shop", href: "/shop" },
                 ]}
             />
-            {/* <ProductComparisionComp /> */}
+            <ProductComparisionComp />
     </div>
   )
 }

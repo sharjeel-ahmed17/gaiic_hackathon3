@@ -2,6 +2,7 @@
 import { Breadcrumb } from '@/components/reuseable/Hero2'
 import { useCart } from '@/contexts/cartContext'
 import React from 'react'
+import BlogPage from './BlogPage'
 
 const Blog = () => {
   const {cart}  = useCart();
@@ -17,6 +18,7 @@ const Blog = () => {
           { name: "Shop", href: "/shop" },
         ]}
       /> 
+      <BlogPage />
     </div>
   )
 }
