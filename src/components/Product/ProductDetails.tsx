@@ -2,20 +2,20 @@ export default function ProductDetailsComp() {
     return (
       <div className="flex flex-col lg:flex-row gap-8 p-6">
         {/* Left Side - Image Gallery */}
-        <div className="flex gap-4 w-[50%]">
-          <div className="flex flex-col gap-4">
+        <div className="flex gap-4 md:w-[50%] flex-col md:flex-row">
+          <div className="flex md:flex-col flex-row gap-4 order-2 md:order-1">
             <img src="/images/cat1.png" alt="Thumbnail" className="w-16 h-16 rounded-lg bg-cream" />
             <img src="/images/cat2.png" alt="Thumbnail" className="w-16 h-16 rounded-lg bg-cream" />
             <img src="/images/cat3.png" alt="Thumbnail" className="w-16 h-16 rounded-lg bg-cream" />
             <img src="/images/cat1.png" alt="Thumbnail" className="w-16 h-16 rounded-lg bg-cream" />
           </div>
-          <div className="bg-cream p-4 rounded-lg">
+          <div className="bg-cream p-4 rounded-lg order-1 md:order-2">
             <img src="/images/cat1.png" alt="Asgaard sofa" className="w-full h-96 rounded-lg" />
           </div>
         </div>
   
         {/* Right Side - Product Info */}
-        <div className="flex flex-col gap-4 w-[50%]">
+        <div className="flex flex-col gap-4 md:w-[50%]">
           <h1 className="text-3xl font-bold">Asgaard sofa</h1>
           <p className="text-gray-500 text-lg">Rs. 250,000.00</p>
           <div className="flex items-center gap-2">
@@ -31,8 +31,8 @@ export default function ProductDetailsComp() {
           {/* Size Selection */}
           <div>
             <h2 className="text-sm font-semibold">Size</h2>
-            <div className="flex gap-2 mt-1">
-              <button className="px-3 py-1 border rounded-lg bg-yellow-600 text-white">L</button>
+            <div className="flex gap-2 mt-1 ">
+              <button className="px-3 py-1 border rounded-lg bg-yellow-600 text-white">L</ button>
               <button className="px-3 py-1 border rounded-lg">XL</button>
               <button className="px-3 py-1 border rounded-lg">XS</button>
             </div>
@@ -49,7 +49,7 @@ export default function ProductDetailsComp() {
           </div>
   
           {/* Quantity and Buttons */}
-          <div className="flex items-center gap-4 mt-4">
+          <div className="flex items-center gap-4 mt-4 flex-col md:flex-row">
             <div className="flex items-center border rounded-lg">
               <button className="px-3 py-2">-</button>
               <span className="px-4">1</span>
