@@ -15,6 +15,7 @@ const user = await currentUser()
 
       <Hero />
       <Category />
+      <h2 className="text-center my-4 text-[40px] font-bold">Our Products</h2>
       <FeaturedProducts />
       <Cta />
       <ImageGallery />

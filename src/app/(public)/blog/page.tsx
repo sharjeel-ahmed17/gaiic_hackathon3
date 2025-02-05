@@ -1,5 +1,5 @@
 "use client"
-import { Breadcrumb } from '@/components/reuseable/Hero2'
+import { Hero2 } from '@/components/reuseable/Hero2'
 import { useCart } from '@/contexts/cartContext'
 import React from 'react'
 import BlogPage from './BlogPage'
@@ -10,14 +10,7 @@ const Blog = () => {
   
   return (
     <div>
-      <Breadcrumb
-        title="Shop"
-        backgroundImage="/images/hero2.jpg"
-        links={[
-          { name: "Home", href: "/" },
-          { name: "Shop", href: "/shop" },
-        ]}
-      /> 
+ <Hero2 title='Blog'/>
       <BlogPage />
     </div>
   )

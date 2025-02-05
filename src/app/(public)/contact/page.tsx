@@ -1,18 +1,12 @@
-import { Breadcrumb } from '@/components/reuseable/Hero2'
+
 import React from 'react'
 import ContactForm from './ContactForm'
+import { Hero2 } from '@/components/reuseable/Hero2'
 
 const Contact = () => {
   return (
     <div>
-      <Breadcrumb
-        title="Shop"
-        backgroundImage="/images/hero2.jpg"
-        links={[
-          { name: "Home", href: "/" },
-          { name: "Shop", href: "/shop" },
-        ]}
-      />
+      <Hero2 title='Blog'/>
       <div className='text-center'>
 
       <h2 className='text-[36px] font-semibold leading-[54px]'>Get In Touch With Us</h2>

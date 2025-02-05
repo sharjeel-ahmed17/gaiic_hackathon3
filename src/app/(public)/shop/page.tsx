@@ -143,10 +143,7 @@ const Shop = async ({ searchParams }: { searchParams: Promise<{ [key: string]: s
   return (
 
     <div>
-      <Hero2
-        title="Shop"
-        backgroundImage="/images/hero2.jpg"
-      />
+      <Hero2 title="Shop"/>
       <ProductToolbar totalLength={data.length} />
       {
         data.length > 0 ?
