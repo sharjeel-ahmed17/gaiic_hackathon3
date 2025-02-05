@@ -1,6 +1,7 @@
 import { Breadcrumb } from '@/components/reuseable/Hero2'
 import React from 'react'
 import ProductComparisionComp from './ProductComparison'
+import ProductComparisonGrid from './ProductComparisonComp'
 
 const ProductComparision = () => {
   return (
@@ -14,6 +15,8 @@ const ProductComparision = () => {
                 ]}
             />
             <ProductComparisionComp />
+<ProductComparisonGrid/>
+        
     </div>
   )
 }
