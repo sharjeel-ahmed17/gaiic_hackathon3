@@ -1,6 +1,7 @@
 import ProductListing from "@/components/Product/ProductListing";
 import { Button } from "@/components/ui/button";
 import { Product } from "@/interfaces/Product";
+import Link from "next/link";
 
 export default async function FeaturedProducts() {
 
@@ -29,8 +30,7 @@ export default async function FeaturedProducts() {
       <div className="flex justify-center my-5">
 
         {/* <Link href='/shop'> */}
-
-        <Button variant="btnPrimary">show more</Button>
+<Link href='/shop'><Button variant="btnPrimary">show more</Button></Link>
         {/* </Link> */}
       </div>
     </>

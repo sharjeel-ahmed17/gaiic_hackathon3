@@ -7,6 +7,7 @@ import { discountPercentage } from "@/lib/dicountPercentage";
 import { useCart } from "@/contexts/cartContext";
 import { urlFor } from "@/sanity/lib/image";
 import toast from "react-hot-toast";
+import Link from "next/link";
 
 const ProductCard = ({ product }: { product: Product }) => {
   const { addToCart } = useCart();
@@ -24,6 +25,7 @@ const ProductCard = ({ product }: { product: Product }) => {
   return (
     <div className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
       {/* Product Image */}
+      <Link href={`/shop/${product._id}`}>opwn </Link>
       <Image
         src={urlFor(product.thumbnail).url()}
         alt={product.name}
