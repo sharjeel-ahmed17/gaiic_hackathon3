@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <div className="my-10 flex items-center justify-center  bg-gray-100 bg-[url(/images/hero.jpg)] bg-cover md:h-[716px] h-[500px]">
+    <div className="mb-10 flex items-center justify-center  bg-gray-100 bg-[url(/images/hero.jpg)] bg-cover md:h-[716px] h-[500px]">
 
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:space-x-8 px-4 lg:px-16">
     

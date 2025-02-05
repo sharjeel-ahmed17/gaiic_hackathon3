@@ -5,8 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/common/Header/Header";
 import { CartProvider } from "@/contexts/cartContext";
 import Footer from "@/components/common/Footer/Footer";
-
-
+import {Toaster} from "react-hot-toast"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -43,6 +42,7 @@ export default function RootLayout({
 </div>
         </CartProvider>
         </ClerkProvider>
+        <Toaster />
       </body>
     </html>
   );

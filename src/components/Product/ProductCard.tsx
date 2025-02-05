@@ -1,13 +1,12 @@
-
-
 "use client";
 import Image from "next/image";
 import { useState } from "react";
 import { Product } from "@/interfaces/Product";
-import { ShoppingCart, Heart, Share2 } from "lucide-react";
+import { ShoppingCart, Heart, Share2, Check } from "lucide-react";
 import { discountPercentage } from "@/lib/dicountPercentage";
 import { useCart } from "@/contexts/cartContext";
 import { urlFor } from "@/sanity/lib/image";
+import toast from "react-hot-toast";
 
 const ProductCard = ({ product }: { product: Product }) => {
   const { addToCart } = useCart();
@@ -16,6 +15,10 @@ const ProductCard = ({ product }: { product: Product }) => {
   const handleAddToCart = () => {
     addToCart(product);
     setAddedToCart(true);
+    // toast(`✔ ${product.name} is added successfully`)
+    toast.success(`${product.name} is added successfully` , {
+      icon : <Check color="green"/>
+    })
   };
 
   return (

@@ -9,7 +9,7 @@ const Category = async () => {
     if (!response.ok) throw new Error("Category not Found");
 
     const {error,message,data}:{error:boolean,message:string,data:CategoryInterface[]} = await response.json()
-      console.log(error,message,data);
+      // console.log(error,message,data);
       
       if (error) {
         console.log("error",error);

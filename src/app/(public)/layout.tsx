@@ -5,6 +5,7 @@ import Header from "@/components/common/Header/Header";
 import Footer from "@/components/common/Footer/Footer";
 import { poppins } from "@/lib/fonts";
 import { CartProvider } from "@/contexts/cartContext";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,6 +29,7 @@ export default function RootLayout({
             </div>
           </CartProvider>
         </ClerkProvider>
+        <Toaster/>
       </body>
     </html>
   );
