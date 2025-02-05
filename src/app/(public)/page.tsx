@@ -14,7 +14,7 @@ const user = await currentUser()
     <>
 
       <Hero />
-      {/* <Category /> */}
+      <Category />
       <FeaturedProducts />
       <Cta />
       <ImageGallery />
