@@ -1,11 +1,11 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { CartItem } from '@/interfaces/cart';
 import { Product } from '@/interfaces/Product';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-interface CartItem extends Product {
-  quantity: number; 
-}
+
+
 
 interface CartContextType {
   cart: CartItem[];
