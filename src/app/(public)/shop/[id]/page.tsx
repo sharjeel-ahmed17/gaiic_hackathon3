@@ -21,7 +21,7 @@ const ProductDetails = async ({ params }: { params: { id: string } }) => {
 
   const product = await getProductById(params.id);
 
-  // console.log('Product successfully fetched:', product);
+  console.log('Product successfully fetched:');
   
 
   if (!product) {

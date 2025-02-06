@@ -1,3 +1,6 @@
+
+
+
 export default function BillingDetails() {
     return (
       <div className="">
@@ -21,8 +24,12 @@ export default function BillingDetails() {
   
         <div className="mt-4">
           <label className="block text-sm font-medium">Country / Region</label>
-          <select className="w-full p-2 border rounded-lg bg-gray-100" disabled>
+          <select className="w-full p-2 border rounded-lg bg-gray-100" >
             <option>Sri Lanka</option>
+            <option>westendies</option>
+            <option>pakistan</option>
+            <option>india</option>
+            <option>bangladesh</option>
           </select>
         </div>
   
@@ -38,7 +45,7 @@ export default function BillingDetails() {
   
         <div className="mt-4">
           <label className="block text-sm font-medium">Province</label>
-          <select className="w-full p-2 border rounded-lg bg-gray-100" disabled>
+          <select className="w-full p-2 border rounded-lg bg-gray-100" >
             <option>Western Province</option>
           </select>
         </div>

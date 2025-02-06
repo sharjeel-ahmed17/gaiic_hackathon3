@@ -1,19 +1,26 @@
 import { client } from "@/sanity/lib/client";
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server"; // Import NextRequest type
-
-// Define the expected params type
-interface Params {
-  params: {
-    id: string;
-  };
-}
+import type { NextRequest } from "next/server";
 
 // Sanity query to fetch a product by ID
-export async function GET(req: NextRequest, { params }: Params) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    // Ensure params are awaited
-    const { id } =  params;
+    // Access params directly
+    const id = (await params).id 
+    console.log(id);
+
+    if (!id) {
+      return NextResponse.json(
+        {
+          error: true,
+          message: "Product ID is required",
+          data: null,
+        },
+        { status: 400 }
+      );
+    }
+
+    console.log("Fetching product with ID:", id);
 
     // Sanity query to fetch product by _id
     const query = `*[_type == "products" && _id == "${id}"][0]`;
@@ -39,11 +46,10 @@ export async function GET(req: NextRequest, { params }: Params) {
       { status: 200 }
     );
   } catch (error) {
-    const err = error as Error; // Ensure error is typed properly
     return NextResponse.json(
       {
         error: true,
-        message: err.message,
+        message: (error as Error).message,
         data: null,
       },
       { status: 500 }
