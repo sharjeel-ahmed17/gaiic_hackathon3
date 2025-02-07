@@ -4,7 +4,7 @@ import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { CategoryCard } from "../Category/CategoryCard";
-import CategoryCardSkeleton from "../Skeletons/Category/CategoryCardSkeleton";
+// import CategoryCardSkeleton from "../Skeletons/Category/CategoryCardSkeleton";
 
 
 const Category = async () => {
@@ -33,9 +33,10 @@ const Category = async () => {
             data.slice(0, 3).map((category, index) => (
               <CategoryCard key={index} id={category._id} image={urlFor(category.image).url()} title={category.title} />
             )) :
-            [...Array(3)].map((_, index) => (
-              <CategoryCardSkeleton key={index} />
-            ))
+            // [...Array(3)].map((_, index) => (
+            //   <CategoryCardSkeleton key={index} />
+            // ))
+            <h3>no pro4tgy</h3>
         }
       </div>
       {
