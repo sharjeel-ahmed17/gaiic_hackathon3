@@ -58,9 +58,7 @@ const Shop = async ({ searchParams }: { searchParams: Promise<{ [key: string]: s
 
     <div>
       <Hero2
-        title="Shop"
-        backgroundImage="/images/hero2.jpg"
-      />
+        title="Shop" />
       <ProductToolbar totalLength={data.length} />
       {
         data.length > 0 ?
