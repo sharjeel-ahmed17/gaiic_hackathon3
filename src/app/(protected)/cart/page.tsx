@@ -1,4 +1,4 @@
-import CartTable from '@/components/cart/cartTable/cartTable'
+import CartTable from '@/components/cart/cartTable/CartTable'
 import Services from '@/components/resuable/Services'
 import { Metadata } from 'next';
 import React from 'react'
