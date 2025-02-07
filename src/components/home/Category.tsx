@@ -1,9 +1,10 @@
 import { CategoryInterface } from "@/interfaces/Category";
 import { urlFor } from "@/sanity/lib/image";
-import CategoryCardSkeleton from "../Skeletons/Category/CategoryCardSkeleton";
-import { CategoryCard } from "../Category/CategoryCard";
+
 import Link from "next/link";
 import { Button } from "../ui/button";
+import { CategoryCard } from "../Category/CategoryCard";
+import CategoryCardSkeleton from "../Skeletons/Category/CategoryCardSkeleton";
 
 
 const Category = async () => {
