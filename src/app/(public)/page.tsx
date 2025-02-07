@@ -5,7 +5,7 @@ import ImageGallery from "@/components/home/ImageGallery";
 import OurProducts from "@/components/home/OurProducts";
 import { currentUser } from "@clerk/nextjs/server";
 import { Metadata } from "next";
-// import { currentUser } from "@clerk/nextjs/server";
+
 
 export const metadata: Metadata = {
   title: "Homepage | Furniro",
@@ -18,9 +18,7 @@ export default async function Home() {
   console.log(user?.id);
 
   return (
-    // <div className="flex justify-center items-center">
-    //   <h1 className="text-4xl text-green-950">{user ? 'Dashboard' : 'Login'}</h1>
-    // </div>
+
     <div>
       <Hero />
       <Category />
