@@ -4,10 +4,11 @@ import Link from "next/link";
 import { usePathname } from 'next/navigation'
 interface Hero2Props {
   title: string;
-  
+  backgroundImage: string;
+  // links: { name: string; href: string }[];
 }
 
-export const Hero2: React.FC<Hero2Props> = ({ title}) => {
+export const Hero2: React.FC<Hero2Props> = ({ title, backgroundImage }) => {
   const pathname = usePathname()
 
   const links = [
@@ -15,8 +16,7 @@ export const Hero2: React.FC<Hero2Props> = ({ title}) => {
     { name: pathname.charAt(1).toUpperCase() + pathname.slice(2, pathname.length), href: pathname },
   ]
   return (
-    // <div className="relative w-full h-56 flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
-    <div className="relative w-full h-56 flex items-center justify-center bg-cover bg-center bg-[url(/images/cat1.png)]" >
+    <div className="relative w-full h-56 flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="absolute inset-0 bg-black bg-opacity-30"></div> {/* Overlay */}
       <div className="relative z-10 text-center">
         <Image src='/images/mainLogo.png' width={100} height={100} alt="" />
@@ -35,3 +35,4 @@ export const Hero2: React.FC<Hero2Props> = ({ title}) => {
     </div>
   );
 };
+

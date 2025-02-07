@@ -1,24 +1,31 @@
-import Category from "@/components/home/category/Category";
-import Cta from "@/components/home/cta/Cta";
-import FeaturedProducts from "@/components/home/featuredProducts/FeaturedProducts";
-import Hero from "@/components/home/hero/Hero";
-import ImageGallery from "@/components/home/imageGallery/ImageGallery";
-import { currentUser } from "@clerk/nextjs/server";
+import Category from "@/components/home/Category";
+import Inspirations from "@/components/home/Cta";
+import Hero from "@/components/home/Hero";
+import ImageGallery from "@/components/home/ImageGallery";
+import OurProducts from "@/components/home/OurProducts";
+import { Metadata } from "next";
+// import { currentUser } from "@clerk/nextjs/server";
 
-
+export const metadata: Metadata = {
+  title: "Homepage | Furniro",
+  description: "Furniro a Furniture Ecommerce Webite",
+};
 
 export default async function Home() {
-const user = await currentUser()
-  console.log(user?.id);
-  return (
-    <>
+  // const user = await currentUser()
+  // // console.log(user?.fullName);
+  // console.log(user?.id);
 
+  return (
+    // <div className="flex justify-center items-center">
+    //   <h1 className="text-4xl text-green-950">{user ? 'Dashboard' : 'Login'}</h1>
+    // </div>
+    <div>
       <Hero />
       <Category />
-      <h2 className="text-center my-4 text-[40px] font-bold">Our Products</h2>
-      <FeaturedProducts />
-      <Cta />
+      <OurProducts />
+      <Inspirations />
       <ImageGallery />
-    </>
+    </div>
   );
 }

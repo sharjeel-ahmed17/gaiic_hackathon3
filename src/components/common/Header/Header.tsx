@@ -10,8 +10,8 @@ import { usePathname } from 'next/navigation'
 import { useCart } from '@/contexts/cartContext'
 import { useWishList } from '@/contexts/WhishListContext'
 import { motion } from 'framer-motion'
-import CustomUserButton from "@/components/AUth/CustomUserButon";
-const Header = () => {
+import CustomUserButton from "@/components/Auth/CustomUserButton";
+const Navbar = () => {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false);
   const { cart } = useCart()
@@ -152,4 +152,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

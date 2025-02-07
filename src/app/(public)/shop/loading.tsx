@@ -1,6 +1,6 @@
-import PaginationSeketon from '@/components/skeletons/product/PaginationSkeleton'
-import ProductCardSkeleton from '@/components/skeletons/product/ProductCardSkeleton'
-import ToolBarSkeleton from '@/components/skeletons/product/ToolBarSkeleton'
+import PaginationSeketon from '@/components/Skeletons/Product/PaginationSeketon'
+import ProductCardSkeleton from '@/components/Skeletons/Product/ProductCardSkeleton'
+import ToolBarSkeleton from '@/components/Skeletons/Product/ToolBarSkeleton'
 import React from 'react'
 
 const Loading = () => {

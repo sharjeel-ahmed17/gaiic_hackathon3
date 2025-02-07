@@ -118,4 +118,6 @@ const ProductCard = ({ product }: { product: Product }) => {
     </div>
   );
 };
+
+
 export default ProductCard

@@ -8,7 +8,7 @@ const Pagination = ({ totalPages }: { totalPages: number }) => {
   const currentPage = searchParam.get('page') || '1'
   const perPage = searchParam.get('perPage') || '8'
   return (
-    <nav aria-label="Page navigation example" className="flex justify-center my-10">
+    <nav aria-label="Page navigation example" className="flex justify-center mb-10">
       <ul className="inline-flex items-center space-x-2 text-sm">
         {
           Number(currentPage) > 1 &&
