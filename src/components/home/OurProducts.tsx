@@ -1,4 +1,3 @@
-
 import { Product } from '@/interfaces/Product';
 import React from 'react'
 import ProductCard from '../Product/ProductCard';
