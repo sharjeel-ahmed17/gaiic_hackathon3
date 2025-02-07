@@ -1,3 +1,4 @@
+
 export interface Product {
     isNew: boolean;
     category: {
@@ -52,7 +53,7 @@ export interface Product {
     };
     minimunOrderQuantity: number;
     colors: string[];
-    _id: number;
+    _id: string;
     warranty: {
         warrentyServiceType: string;
         domesticWarranty: string;
@@ -75,5 +76,3 @@ export interface Product {
     price: number;
     _createdAt: string;
 }
-
-

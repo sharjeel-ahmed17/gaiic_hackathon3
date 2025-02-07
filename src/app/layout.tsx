@@ -1,4 +1,4 @@
-import{CartProvider} from '@/contexts/cartContext';
+import { CartContextProvider } from '@/contexts/cartContext';
 import { WishListProvider } from '@/contexts/WhishListContext';
 import { poppins } from '@/lib/fonts';
 import { ClerkProvider } from '@clerk/nextjs';
@@ -13,15 +13,11 @@ const RootLayout = ({
         <html lang="en">
             <body className={`${poppins.className}`}>
                 <ClerkProvider>
-                    <CartProvider>
+                    <CartContextProvider>
                         <WishListProvider>
-
-                            <div className="max-w-[1440px] mx-auto">
-                                {children}
-                            </div>
+                            {children}
                         </WishListProvider>
-
-                    </CartProvider>
+                    </CartContextProvider>
 
                 </ClerkProvider>
             </body>
